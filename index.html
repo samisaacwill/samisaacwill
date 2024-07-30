@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Redirect Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .button-container {
+            margin: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 14px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="buttons"></div>
+
+    <script>
+        const urls = [
+            "https://about.google/",
+            "https://account.microsoft.com/",
+            "https://adobe.com/",
+            "https://airbnb.com/",
+            "https://alibaba.com/",
+            "https://amazon.com/",
+            "https://americangreetings.com/",
+            "https://ancestry.com/",
+            "https://apple.com/",
+            "https://archive.org/",
+            "https://ask.com/",
+            "https://bankofamerica.com/",
+            "https://bbc.com/",
+            "https://bestbuy.com/",
+            "https://bing.com/",
+            "https://blackboard.com/",
+            "https://booking.com/",
+            "https://boston.com/",
+            "https://box.com/",
+            "https://businessinsider.com/",
+            "https://cbs.com/",
+            "https://chase.com/",
+            "https://cnn.com/",
+            "https://comcast.com/",
+            "https://coursera.org/",
+            "https://crunchbase.com/",
+            "https://deviantart.com/",
+            "https://dictionary.com/",
+            "https://discord.com/",
+            "https://duckduckgo.com/",
+            "https://dropbox.com/",
+            "https://ebay.com/",
+            "https://ehow.com/",
+            "https://espn.com/",
+            "https://etsy.com/",
+            "https://expedia.com/",
+            "https://facebook.com/",
+            "https://fandom.com/",
+            "https://feedly.com/",
+            "https://flickr.com/",
+            "https://forbes.com/",
+            "https://foxnews.com/",
+            "https://freelancer.com/",
+            "https://github.com/",
+            "https://gizmodo.com/",
+            "https://glassdoor.com/",
+            "https://godaddy.com/",
+            "https://google.com/",
+            "https://grubhub.com/",
+            "https://hbo.com/",
+            "https://healthline.com/",
+            "https://hulu.com/",
+            "https://ibm.com/",
+            "https://icloud.com/",
+            "https://ign.com/",
+            "https://imdb.com/",
+            "https://imgur.com/",
+            "https://indeed.com/",
+            "https://instagram.com/",
+            "https://intuit.com/",
+            "https://invisionapp.com/",
+            "https://joomla.org/",
+            "https://kayak.com/",
+            "https://khanacademy.org/",
+            "https://kickstarter.com/",
+            "https://last.fm/",
+            "https://legacy.com/",
+            "https://linkedin.com/",
+            "https://live.com/",
+            "https://lyft.com/",
+            "https://mailchimp.com/",
+            "https://mashable.com/",
+            "https://microsoft.com/",
+            "https://mozilla.org/",
+            "https://mural.co/",
+            "https://myspace.com/",
+            "https://netflix.com/",
+            "https://newyorker.com/",
+            "https://npr.org/",
+            "https://nytimes.com/",
+            "https://oracle.com/",
+            "https://overstock.com/",
+            "https://pandora.com/",
+            "https://paypal.com/",
+            "https://pinterest.com/",
+            "https://quora.com/",
+            "https://reddit.com/",
+            "https://salesforce.com/",
+            "https://scribd.com/",
+            "https://shutterstock.com/",
+            "https://skype.com/",
+            "https://snapchat.com/",
+            "https://soundcloud.com/",
+            "https://spotify.com/",
+            "https://stackoverflow.com/",
+            "https://ted.com/",
+            "https://tumblr.com/",
+            "https://twitter.com/",
+            "https://uber.com/",
+            "https://vimeo.com/",
+            "https://walmart.com/",
+            "https://weather.com/",
+            "https://weebly.com/",
+            "https://wellsfargo.com/",
+            "https://whatsapp.com/",
+            "https://whitehouse.gov/",
+            "https://wikihow.com/",
+            "https://wikipedia.org/",
+            "https://wordpress.com/",
+            "https://xbox.com/",
+            "https://xfinity.com/",
+            "https://yahoo.com/",
+            "https://yelp.com/",
+            "https://yimg.com/",
+            "https://yola.com/",
+            "https://youtube.com/",
+            "https://zappos.com/",
+            "https://zillow.com/",
+            "https://zoom.us/",
+            "https://zynga.com/"
+        ];
+
+        const buttonsContainer = document.getElementById('buttons');
+
+        urls.forEach(url => {
+            const buttonContainer = document.createElement('div');
+            buttonContainer.className = 'button-container';
+            const button = document.createElement('button');
+            button.textContent = url;
+            button.onclick = () => window.location.href = url;
+            buttonContainer.appendChild(button);
+            buttonsContainer.appendChild(buttonContainer);
+        });
+    </script>
+</body>
+</html>
